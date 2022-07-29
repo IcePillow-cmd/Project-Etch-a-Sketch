@@ -9,4 +9,10 @@ function createCells(baseNumber) {
     }
 }
 
+function sketchCells(e) {
+    if (e.target !== gridCon) {
+        e.target.style.backgroundColor = "black";
+    }
+}
+
 createCells(16)
