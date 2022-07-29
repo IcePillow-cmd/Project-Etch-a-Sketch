@@ -1,0 +1,1 @@
+const gridCon = document.querySelector("#grid-container");
