@@ -9,8 +9,6 @@
 .grid-cell {
     border: 1px solid black;
     box-sizing: border-box;
-    margin-right: -1px;
-    margin-top: -1px;
     flex-grow: 1;
     flex-shrink: 1;
 }
