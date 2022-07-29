@@ -16,3 +16,5 @@ function sketchCells(e) {
 }
 
 createCells(16)
+
+gridCon.addEventListener("mouseover", sketchCells)
