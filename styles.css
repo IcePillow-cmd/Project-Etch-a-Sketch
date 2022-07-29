@@ -6,7 +6,7 @@
     flex-flow: row wrap;
 }
 
-#grid-container div {
+.grid-cell {
     border: 1px solid black;
     box-sizing: border-box;
     margin-right: -1px;
