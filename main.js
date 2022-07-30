@@ -1,4 +1,5 @@
 const gridCon = document.querySelector("#grid-container");
+const cellCounter = document.querySelector("#cell-counter");
 
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
