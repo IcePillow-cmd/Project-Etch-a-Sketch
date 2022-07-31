@@ -13,9 +13,7 @@ function createCells(baseNumber) {
 }
 
 function sketchCells(e) {
-    if (e.target !== gridCon) {
         e.target.style.backgroundColor = "black";
-    }
 }
 
 function changeCellCount() {
@@ -31,7 +29,11 @@ function clearGrid() {
 
 createCells(16)
 
-gridCon.addEventListener("mouseover", sketchCells);
+gridCon.addEventListener("mouseover", (e) => {
+    if(e.target !== gridCon) {
+        sketchCells(e);
+    }
+});
 cellCounter.addEventListener("change", changeCellCount)
 cellCounter.addEventListener("input", () => {
     counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
