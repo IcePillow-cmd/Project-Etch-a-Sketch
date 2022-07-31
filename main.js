@@ -27,3 +27,6 @@ createCells(16)
 
 gridCon.addEventListener("mouseover", sketchCells);
 cellCounter.addEventListener("change", changeCellCount)
+cellCounter.addEventListener("input", () => {
+    counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
+})
