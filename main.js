@@ -24,4 +24,5 @@ function changeCellCount() {
 
 createCells(16)
 
-gridCon.addEventListener("mouseover", sketchCells)
+gridCon.addEventListener("mouseover", sketchCells);
+cellCounter.addEventListener("change", changeCellCount)
