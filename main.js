@@ -36,3 +36,4 @@ cellCounter.addEventListener("change", changeCellCount)
 cellCounter.addEventListener("input", () => {
     counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
 })
+clearBtn.addEventListener("click", clearGrid);
