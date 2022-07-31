@@ -16,6 +16,12 @@ function sketchCells(e) {
     }
 }
 
+function changeCellCount() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => gridCon.removeChild(cell));
+    createCells(cellCounter.value);
+}
+
 createCells(16)
 
 gridCon.addEventListener("mouseover", sketchCells)
