@@ -24,6 +24,11 @@ function changeCellCount() {
     createCells(cellCounter.value);
 }
 
+function clearGrid() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => cell.style.backgroundColor = "white"); 
+}
+
 createCells(16)
 
 gridCon.addEventListener("mouseover", sketchCells);
