@@ -3,6 +3,10 @@ const cellCounter = document.querySelector("#cell-counter");
 const counterCount = document.querySelector("#counter-count");
 const clearBtn = document.querySelector("#clear-btn");
 
+function getRandomNum(num, filler=0) {
+    return Math.floor(Math.random()*num)+filler;
+}
+
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
