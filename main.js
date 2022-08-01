@@ -7,6 +7,10 @@ function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
 }
 
+function rainbowSketch(e) {
+    e.target.style.backgroundColor = `rgb(${getRandomNum(255, 100)}, ${getRandomNum(255, 50)}, ${getRandomNum(255, 50)})`;
+}
+
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
