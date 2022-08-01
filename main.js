@@ -32,6 +32,14 @@ function shadeSketch(e) {
     e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
 }
 
+function tintSketch(e) {
+    const oldColor = getRGBValues(e.target.style.backgroundColor)
+    const newRed = oldColor.red + getPercentValue(255 - oldColor.red, 10);
+    const newGreen = oldColor.green + getPercentValue(255 - oldColor.green, 10);
+    const newBlue = oldColor.blue + getPercentValue(255 - oldColor.blue, 10);
+    e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
+}
+
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
