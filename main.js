@@ -44,6 +44,7 @@ function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
         gridCell.classList.add("grid-cell");
+        gridCell.style.backgroundColor = "rgb(255,255,255)";
         gridCell.style.flexBasis = `${100/baseNumber}%`
         gridCon.appendChild(gridCell);
     }
