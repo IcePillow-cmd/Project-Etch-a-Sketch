@@ -7,6 +7,15 @@ function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
 }
 
+function getRGBValues(rgb) {
+    rgbValues = rgb.substring(rgb.indexOf("(") + 1, rgb.lastIndexOf(")")).split(",");
+    return {
+        red: parseInt(rgbValues[0]),
+        green: parseInt(rgbValues[1]),
+        blue: parseInt(rgbValues[2])
+    }
+}
+
 function rainbowSketch(e) {
     e.target.style.backgroundColor = `rgb(${getRandomNum(255, 100)}, ${getRandomNum(255, 50)}, ${getRandomNum(255, 50)})`;
 }
