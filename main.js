@@ -7,7 +7,8 @@ const solidBtn = document.querySelector("#solid-btn");
 const rainbowBtn = document.querySelector("#rainbow-btn");
 const shadeBtn = document.querySelector("#shade-btn");
 const tintBtn = document.querySelector("#tint-btn");
-let sketchStyle;
+const styleBtns = [solidBtn, rainbowBtn, shadeBtn, tintBtn];
+let sketchStyle = solidSketch;
 
 function changeSketchStyle(e) {
     switch (e.target) {
@@ -100,7 +101,7 @@ createCells(16)
 
 gridCon.addEventListener("mouseover", (e) => {
     if(e.target !== gridCon) {
-        solidSketch(e);
+        sketchStyle(e);
     }
 });
 cellCounter.addEventListener("change", changeCellCount)
@@ -108,3 +109,7 @@ cellCounter.addEventListener("input", () => {
     counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
 })
 clearBtn.addEventListener("click", clearGrid);
+
+styleBtns.forEach((btn) => {
+    btn.addEventListener("click", changeSketchStyle);
+})
