@@ -67,9 +67,10 @@ function shadeSketch(e) {
 
 function tintSketch(e) {
     const oldColor = getRGBValues(e.target.style.backgroundColor)
-    const newRed = oldColor.red + getPercentValue(255 - oldColor.red, 10);
-    const newGreen = oldColor.green + getPercentValue(255 - oldColor.green, 10);
-    const newBlue = oldColor.blue + getPercentValue(255 - oldColor.blue, 10);
+    const colorPercentage = getPercentValue(255, 10);
+    const newRed = oldColor.red + colorPercentage; 
+    const newGreen = oldColor.green + colorPercentage;
+    const newBlue = oldColor.blue + colorPercentage;
     e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
 }
 
