@@ -17,6 +17,12 @@ function getRGBValues(rgb) {
     }
 }
 
+function convertHexToRGB(hex) {
+    const hexValues = hex.match(/[\w]{2}/g);
+    const rgbValues = hexValues.map((hexValue) => parseInt(hexValue, 16));
+    return `rgb(${rgbValues})`
+}
+
 function getPercentValue(num, percentage) {
     return Math.floor(num * percentage / 100);
 }
