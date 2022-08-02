@@ -2,6 +2,7 @@ const gridCon = document.querySelector("#grid-container");
 const cellCounter = document.querySelector("#cell-counter");
 const counterCount = document.querySelector("#counter-count");
 const clearBtn = document.querySelector("#clear-btn");
+const colorPicker = document.querySelector("#color-picker");
 
 function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
