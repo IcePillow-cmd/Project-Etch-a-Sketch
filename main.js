@@ -3,6 +3,10 @@ const cellCounter = document.querySelector("#cell-counter");
 const counterCount = document.querySelector("#counter-count");
 const clearBtn = document.querySelector("#clear-btn");
 const colorPicker = document.querySelector("#color-picker");
+const solidBtn = document.querySelector("#solid-btn");
+const rainbowBtn = document.querySelector("#rainbow-btn");
+const shadeBtn = document.querySelector("#shade-btn");
+const tintBtn = document.querySelector("#tint-btn");
 
 function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
