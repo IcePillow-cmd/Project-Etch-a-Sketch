@@ -58,9 +58,10 @@ function rainbowSketch(e) {
 
 function shadeSketch(e) {
     const oldColor = getRGBValues(e.target.style.backgroundColor);
-    const newRed = oldColor.red - getPercentValue(oldColor.red, 10);
-    const newGreen = oldColor.green - getPercentValue(oldColor.green, 10);
-    const newBlue = oldColor.blue - getPercentValue(oldColor.blue, 10);
+    const colorPercentage = getPercentValue(255, 10);
+    const newRed = oldColor.red - colorPercentage;
+    const newGreen = oldColor.green - colorPercentage;
+    const newBlue = oldColor.blue - colorPercentage;
     e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
 }
 
