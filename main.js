@@ -9,7 +9,7 @@ function getRandomNum(num, filler=0) {
 }
 
 function getRGBValues(rgb) {
-    rgbValues = rgb.substring(rgb.indexOf("(") + 1, rgb.lastIndexOf(")")).split(",");
+    const rgbValues = rgb.match(/[\d]+/g);
     return {
         red: parseInt(rgbValues[0]),
         green: parseInt(rgbValues[1]),
