@@ -7,6 +7,26 @@ const solidBtn = document.querySelector("#solid-btn");
 const rainbowBtn = document.querySelector("#rainbow-btn");
 const shadeBtn = document.querySelector("#shade-btn");
 const tintBtn = document.querySelector("#tint-btn");
+let sketchStyle;
+
+function changeSketchStyle(e) {
+    switch (e.target) {
+        case solidBtn:
+            sketchStyle = solidSketch;
+            break;
+        case rainbowBtn:
+            sketchStyle = rainbowSketch;
+            break;
+        case shadeBtn:
+            sketchStyle = shadeSketch;
+            break;
+        case tintBtn:
+            sketchStyle = tintSketch;
+            break;
+        default:
+            sketchStyle = solidSketch;
+    }
+}
 
 function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
