@@ -57,8 +57,8 @@ function createCells(baseNumber) {
     }
 }
 
-function sketchCells(e) {
-        e.target.style.backgroundColor = "black";
+function solidSketch(e) {
+        e.target.style.backgroundColor = convertHexToRGB(colorPicker.value);
 }
 
 function changeCellCount() {
@@ -76,7 +76,7 @@ createCells(16)
 
 gridCon.addEventListener("mouseover", (e) => {
     if(e.target !== gridCon) {
-        sketchCells(e);
+        solidSketch(e);
     }
 });
 cellCounter.addEventListener("change", changeCellCount)
