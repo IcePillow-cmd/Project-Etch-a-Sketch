@@ -94,7 +94,7 @@ function changeCellCount() {
 
 function clearGrid() {
     const gridCells = document.querySelectorAll(".grid-cell");
-    gridCells.forEach((cell) => cell.style.backgroundColor = "white"); 
+    gridCells.forEach((cell) => cell.style.backgroundColor = "rgb(255,255,255)"); 
 }
 
 createCells(16)
