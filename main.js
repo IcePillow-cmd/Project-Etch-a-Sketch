@@ -90,6 +90,12 @@ function solidSketch(e) {
         e.target.style.backgroundColor = convertHexToRGB(colorPicker.value);
 }
 
+function sketchCell(e) {
+    if (e.target !== gridCon) {
+        sketchStyle(e)
+    }
+}
+
 function changeCellCount() {
     const gridCells = document.querySelectorAll(".grid-cell");
     gridCells.forEach((cell) => gridCon.removeChild(cell));
@@ -103,11 +109,7 @@ function clearGrid() {
 
 createCells(16)
 
-gridCon.addEventListener("mouseover", (e) => {
-    if(e.target !== gridCon) {
-        sketchStyle(e);
-    }
-});
+gridCon.addEventListener("mouseover", sketchCell);
 cellCounter.addEventListener("change", changeCellCount)
 cellCounter.addEventListener("input", () => {
     counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
