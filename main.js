@@ -11,6 +11,7 @@ const styleBtns = [solidBtn, rainbowBtn, shadeBtn, tintBtn];
 let sketchStyle = solidSketch;
 const lineModeBtn = document.querySelector("#line-mode-btn");
 const dotModeBtn = document.querySelector("#dot-mode-btn");
+const modeBtns = [lineModeBtn, dotModeBtn];
 
 function changeSketchStyle(e) {
     switch (e.target) {
@@ -131,3 +132,4 @@ clearBtn.addEventListener("click", clearGrid);
 styleBtns.forEach((btn) => {
     btn.addEventListener("click", changeSketchStyle);
 })
+modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
