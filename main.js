@@ -31,6 +31,18 @@ function changeSketchStyle(e) {
     }
 }
 
+function changeSketchMode(e) {
+    if (e.target === dotModeBtn || e.key === "z") {
+        gridCon.removeEventListener("mouseover", sketchCell);
+        gridCon.addEventListener("click", sketchCell);
+        console.log("dot mode")
+    } else if (e.target === lineModeBtn || e.key === "x") {
+        gridCon.removeEventListener("click", sketchCell);
+        gridCon.addEventListener("mouseover", sketchCell);
+        console.log("line mode")
+    }
+}
+
 function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
 }
