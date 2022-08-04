@@ -9,6 +9,8 @@ const shadeBtn = document.querySelector("#shade-btn");
 const tintBtn = document.querySelector("#tint-btn");
 const styleBtns = [solidBtn, rainbowBtn, shadeBtn, tintBtn];
 let sketchStyle = solidSketch;
+const lineModeBtn = document.querySelector("#line-mode-btn");
+const dotModeBtn = document.querySelector("#dot-mode-btn");
 
 function changeSketchStyle(e) {
     switch (e.target) {
