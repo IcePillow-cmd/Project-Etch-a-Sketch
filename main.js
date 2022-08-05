@@ -47,7 +47,7 @@ function changeSketchStyle(e) {
 
 function changeSketchMode(e) {
     modeBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
-    const modeTarget = getButtonTarget(e, `.sketch-style-btn[data-key=${e.key}]`);
+    const modeTarget = getButtonTarget(e, `.sketch-mode-btn[data-key=${e.key}]`);
     modeTarget.classList.replace("untoggled", "toggled");
     if (e.target === dotModeBtn || e.key === "z") {
         gridCon.removeEventListener("mouseover", sketchCell);
