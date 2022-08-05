@@ -136,5 +136,6 @@ clearBtn.addEventListener("click", clearGrid);
 styleBtns.forEach((btn) => {
     btn.addEventListener("click", changeSketchStyle);
 })
+window.addEventListener("keydown", changeSketchStyle)
 window.addEventListener("keydown", changeSketchMode)
 modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
