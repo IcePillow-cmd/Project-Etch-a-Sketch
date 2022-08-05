@@ -22,6 +22,9 @@ function getButtonTarget(e, keyTarget) {
     }
 }
 function changeSketchStyle(e) {
+    styleBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
+    const styleTarget = getButtonTarget(e, `.sketch-style-btn[data-key=${e.key}]`);
+    styleTarget.classList.replace("untoggled", "toggled");
     switch (true) {
         case e.target === solidBtn:
         case e.key === "a":
