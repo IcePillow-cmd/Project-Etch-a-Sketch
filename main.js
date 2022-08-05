@@ -31,8 +31,6 @@ function changeSketchStyle(e) {
         case e.key === "f":
             sketchStyle = tintSketch;
             break;
-        default:
-            sketchStyle = solidSketch;
     }
 }
 
