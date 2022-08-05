@@ -48,6 +48,17 @@ function changeStyleTarget(e) {
     }
 }
 
+function changeModeTarget(e) {
+    switch (e.key) {
+        case "z":
+            return dotModeBtn;
+        case "x":
+            return lineModeBtn;
+        case undefined:
+            return e.target;
+    }
+}
+
 function changeSketchStyle(e) {
     const doReturn = exitForeignKey(e, "styles");
     if (doReturn === "styles") {
