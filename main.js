@@ -14,17 +14,21 @@ const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = [lineModeBtn, dotModeBtn];
 
 function changeSketchStyle(e) {
-    switch (e.target) {
-        case solidBtn:
+    switch (true) {
+        case e.target === solidBtn:
+        case e.key === "a":
             sketchStyle = solidSketch;
             break;
-        case rainbowBtn:
+        case e.target === rainbowBtn:
+        case e.key === "s":
             sketchStyle = rainbowSketch;
             break;
-        case shadeBtn:
+        case e.target === shadeBtn:
+        case e.key === "d":
             sketchStyle = shadeSketch;
             break;
-        case tintBtn:
+        case e.target === tintBtn:
+        case e.key === "f":
             sketchStyle = tintSketch;
             break;
         default:
