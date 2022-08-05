@@ -83,18 +83,17 @@ function changeSketchStyle(e) {
 }
 
 function changeSketchMode(e) {
-    const doReturn = exitForeignKey(e, "modes");
-    if (doReturn === "modes") {
+    const modeTarget = changeModeTarget(e);
+    if (modeTarget === undefined) {
         return
     }
     modeBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
-    const modeTarget = getButtonTarget(e, `.sketch-mode-btn[data-key=${e.key}]`);
     modeTarget.classList.replace("untoggled", "toggled");
-    if (e.target === dotModeBtn || e.key === "z") {
+    if (modeTarget === dotModeBtn) {
         gridCon.removeEventListener("mouseover", sketchCell);
         gridCon.addEventListener("click", sketchCell);
         console.log("dot mode")
-    } else if (e.target === lineModeBtn || e.key === "x") {
+    } else if (modeTarget == lineModeBtn) {
         gridCon.removeEventListener("click", sketchCell);
         gridCon.addEventListener("mouseover", sketchCell);
         console.log("line mode")
