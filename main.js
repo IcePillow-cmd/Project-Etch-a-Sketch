@@ -21,9 +21,25 @@ function getButtonTarget(e, keyTarget) {
         return e.target
     }
 }
+
+function exitForeignKey(e, type) {
+    const styleLocals = ["a", "s", "d", "f"];
+    const modeLocals = ["z", "x"];
+    if (type === "styles" && !(styleLocals.includes(e.key))) {
+        return type
+    }
+    if (type === "modes" && !(modeLocals.includes(e.key))) {
+        return type
+    }
+} 
+
 function changeSketchStyle(e) {
-    styleBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
+    const doReturn = exitForeignKey(e, "styles");
+    if (doReturn === "styles") {
+        return
+    }
     const styleTarget = getButtonTarget(e, `.sketch-style-btn[data-key=${e.key}]`);
+    styleBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
     styleTarget.classList.replace("untoggled", "toggled");
     switch (true) {
         case e.target === solidBtn:
@@ -46,6 +62,10 @@ function changeSketchStyle(e) {
 }
 
 function changeSketchMode(e) {
+    const doReturn = exitForeignKey(e, "modes");
+    if (doReturn === "modes") {
+        return
+    }
     modeBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
     const modeTarget = getButtonTarget(e, `.sketch-mode-btn[data-key=${e.key}]`);
     modeTarget.classList.replace("untoggled", "toggled");
