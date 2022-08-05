@@ -92,11 +92,9 @@ function changeSketchMode(e) {
     if (modeTarget === dotModeBtn) {
         gridCon.removeEventListener("mouseover", sketchCell);
         gridCon.addEventListener("click", sketchCell);
-        console.log("dot mode")
     } else if (modeTarget == lineModeBtn) {
         gridCon.removeEventListener("click", sketchCell);
         gridCon.addEventListener("mouseover", sketchCell);
-        console.log("line mode")
     }
 }
 
