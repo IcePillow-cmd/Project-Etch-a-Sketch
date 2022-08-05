@@ -13,6 +13,13 @@ const lineModeBtn = document.querySelector("#line-mode-btn");
 const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = document.querySelectorAll(".sketch-mode-btn");
 
+function getButtonTarget(e, keyTarget) {
+    if (e.key !== undefined) {
+        return document.querySelector(keyTarget)
+    } else {
+        return e.target
+    }
+}
 function changeSketchStyle(e) {
     switch (true) {
         case e.target === solidBtn:
