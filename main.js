@@ -7,11 +7,11 @@ const solidBtn = document.querySelector("#solid-btn");
 const rainbowBtn = document.querySelector("#rainbow-btn");
 const shadeBtn = document.querySelector("#shade-btn");
 const tintBtn = document.querySelector("#tint-btn");
-const styleBtns = [solidBtn, rainbowBtn, shadeBtn, tintBtn];
+const styleBtns = document.querySelectorAll(".sketch-style-btn");
 let sketchStyle = solidSketch;
 const lineModeBtn = document.querySelector("#line-mode-btn");
 const dotModeBtn = document.querySelector("#dot-mode-btn");
-const modeBtns = [lineModeBtn, dotModeBtn];
+const modeBtns = document.querySelectorAll(".sketch-mode-btn");
 
 function changeSketchStyle(e) {
     switch (true) {
