@@ -156,3 +156,4 @@ styleBtns.forEach((btn) => {
 window.addEventListener("keydown", changeSketchStyle)
 window.addEventListener("keydown", changeSketchMode)
 modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
+gridSwitch.addEventListener("click", toggleGrid);
