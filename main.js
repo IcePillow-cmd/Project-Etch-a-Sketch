@@ -33,6 +33,21 @@ function exitForeignKey(e, type) {
     }
 } 
 
+function changeStyleTarget(e) {
+    switch (e.key) {
+        case "a":
+            return solidBtn;
+        case "s":
+            return rainbowBtn;
+        case "d":
+            return shadeBtn;
+        case "f":
+            return tintBtn;
+        case undefined:
+            return e.target;   
+    }
+}
+
 function changeSketchStyle(e) {
     const doReturn = exitForeignKey(e, "styles");
     if (doReturn === "styles") {
