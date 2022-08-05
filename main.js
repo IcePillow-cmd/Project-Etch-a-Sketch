@@ -130,6 +130,17 @@ function clearGrid() {
     gridCells.forEach((cell) => cell.style.backgroundColor = "rgb(255,255,255)"); 
 }
 
+function toggleGrid() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    if (gridSwitch.classList.contains("untoggled")) {
+        gridSwitch.classList.replace("untoggled", "toggled");
+        gridCells.forEach((cell) => cell.style.border = "none");
+    } else {
+        gridSwitch.classList.replace("toggled", "untoggled");
+        gridCells.forEach((cell) => cell.style.border = "1px solid black");
+    }
+}
+
 createCells(16)
 
 gridCon.addEventListener("mouseover", sketchCell);
