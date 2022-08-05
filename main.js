@@ -12,6 +12,7 @@ let sketchStyle = solidSketch;
 const lineModeBtn = document.querySelector("#line-mode-btn");
 const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = document.querySelectorAll(".sketch-mode-btn");
+const gridSwitch = document.querySelector("#grid-switch");
 
 function getButtonTarget(e, keyTarget) {
     if (e.key !== undefined) {
