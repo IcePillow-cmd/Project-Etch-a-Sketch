@@ -66,17 +66,17 @@ function changeSketchStyle(e) {
     }
     styleBtns.forEach((cell) => cell.classList.replace("toggled", "untoggled"));
     styleTarget.classList.replace("untoggled", "toggled");
-    switch (true) {
-        case styleTarget === solidBtn:
+    switch (styleTarget) {
+        case solidBtn:
             sketchStyle = solidSketch;
             break;
-        case styleTarget === rainbowBtn:
+        case rainbowBtn:
             sketchStyle = rainbowSketch;
             break;
-        case styleTarget === shadeBtn:
+        case shadeBtn:
             sketchStyle = shadeSketch;
             break;
-        case styleTarget === tintBtn:
+        case tintBtn:
             sketchStyle = tintSketch;
             break;
     }
