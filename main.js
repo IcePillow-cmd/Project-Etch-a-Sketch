@@ -60,28 +60,23 @@ function changeModeTarget(e) {
 }
 
 function changeSketchStyle(e) {
-    const doReturn = exitForeignKey(e, "styles");
-    if (doReturn === "styles") {
+    const styleTarget = changeStyleTarget(e);
+    if (styleTarget === undefined) {
         return
     }
-    const styleTarget = getButtonTarget(e, `.sketch-style-btn[data-key=${e.key}]`);
-    styleBtns.forEach((btn) => btn.classList.replace("toggled", "untoggled"));
+    styleBtns.forEach((cell) => cell.classList.replace("toggled", "untoggled"));
     styleTarget.classList.replace("untoggled", "toggled");
     switch (true) {
-        case e.target === solidBtn:
-        case e.key === "a":
+        case styleTarget === solidBtn:
             sketchStyle = solidSketch;
             break;
-        case e.target === rainbowBtn:
-        case e.key === "s":
+        case styleTarget === rainbowBtn:
             sketchStyle = rainbowSketch;
             break;
-        case e.target === shadeBtn:
-        case e.key === "d":
+        case styleTarget === shadeBtn:
             sketchStyle = shadeSketch;
             break;
-        case e.target === tintBtn:
-        case e.key === "f":
+        case styleTarget === tintBtn:
             sketchStyle = tintSketch;
             break;
     }
