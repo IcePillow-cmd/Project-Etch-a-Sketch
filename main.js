@@ -14,25 +14,6 @@ const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = document.querySelectorAll(".sketch-mode-btn");
 const gridSwitch = document.querySelector("#grid-switch");
 
-function getButtonTarget(e, keyTarget) {
-    if (e.key !== undefined) {
-        return document.querySelector(keyTarget)
-    } else {
-        return e.target
-    }
-}
-
-function exitForeignKey(e, type) {
-    const styleLocals = ["a", "s", "d", "f"];
-    const modeLocals = ["z", "x"];
-    if (type === "styles" && !(styleLocals.includes(e.key))) {
-        return type
-    }
-    if (type === "modes" && !(modeLocals.includes(e.key))) {
-        return type
-    }
-} 
-
 function changeStyleTarget(e) {
     switch (e.key) {
         case "a":
