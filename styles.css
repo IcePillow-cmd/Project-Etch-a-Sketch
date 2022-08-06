@@ -73,4 +73,6 @@ body {
     font-size: 35px;
     text-transform: capitalize;
     text-align: center;
+    background-color: transparent;
+    border: none;
 }
