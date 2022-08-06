@@ -62,7 +62,7 @@ body {
 
 .section-group {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
