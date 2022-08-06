@@ -38,3 +38,11 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
+#style-section,
+#mode-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
