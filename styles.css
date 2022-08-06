@@ -65,4 +65,12 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+}
+
+.sketch-btn {
+    font-family: var(--patrick-fam);
+    font-size: 35px;
+    text-transform: capitalize;
+    text-align: center;
 }
