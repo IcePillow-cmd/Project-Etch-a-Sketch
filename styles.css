@@ -46,3 +46,10 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
+.section-group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
