@@ -77,3 +77,9 @@ body {
     background-color: transparent;
     border: none;
 }
+
+#counter-count {
+    font-family: var(--coming-fam);
+    font-size: 25px;
+    margin: 0;
+}
