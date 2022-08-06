@@ -35,11 +35,13 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 20px 0px;
 }
 
 #header-headings {
     font-family: var(--coming-fam);
     font-size: 50px;
+    margin: 0;
 }
 
 #main {
