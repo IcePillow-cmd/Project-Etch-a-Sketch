@@ -103,7 +103,7 @@ function getPercentValue(num, percentage) {
 }
 
 function rainbowSketch(e) {
-    e.target.style.backgroundColor = `rgb(${getRandomNum(255, 100)}, ${getRandomNum(255, 50)}, ${getRandomNum(255, 50)})`;
+    e.target.style.backgroundColor = `rgb(${getRandomNum(255)}, ${getRandomNum(255)}, ${getRandomNum(255)})`;
 }
 
 function shadeSketch(e) {
