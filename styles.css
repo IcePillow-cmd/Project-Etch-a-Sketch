@@ -24,3 +24,10 @@ body {
 .untoggled {
     color: black;
 }
+
+#header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
