@@ -150,6 +150,10 @@ function changeCellCount() {
     createCells(cellCounter.value);
 }
 
+function getCellCount() {
+    counterCount.textContent = `${cellCounter.value} x ${cellCounter.value}`
+}
+
 function clearGrid() {
     const gridCells = document.querySelectorAll(".grid-cell");
     gridCells.forEach((cell) => cell.style.backgroundColor = "rgb(255,255,255)"); 
@@ -167,12 +171,11 @@ function toggleGrid() {
 }
 
 createCells(16)
+getCellCount();
 
 gridCon.addEventListener("mouseover", sketchCell);
 cellCounter.addEventListener("change", changeCellCount)
-cellCounter.addEventListener("input", () => {
-    counterCount.textContent = `${cellCounter.value}x${cellCounter.value}`
-})
+cellCounter.addEventListener("input", getCellCount)
 clearBtn.addEventListener("click", clearGrid);
 
 styleBtns.forEach((btn) => {
