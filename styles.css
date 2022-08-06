@@ -12,3 +12,11 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+.toggled {
+    color: red;
+}
+
+.untoggled {
+    color: black;
+}
