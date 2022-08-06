@@ -58,6 +58,7 @@ body {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    gap: 25px;
 }
 
 .section-group {
