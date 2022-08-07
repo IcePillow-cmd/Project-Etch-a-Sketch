@@ -104,3 +104,12 @@ body {
     font-weight: bold;
     padding: 0px 5px;
 }
+
+#footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 25px 0px;
+    gap: 25px;
+}
