@@ -14,7 +14,6 @@ const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = document.querySelectorAll(".sketch-mode-btn");
 const gridSwitch = document.querySelector("#grid-switch");
 
-
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
@@ -176,13 +175,12 @@ gridCon.addEventListener("mouseover", sketchCell);
 cellCounter.addEventListener("change", changeCellCount);
 cellCounter.addEventListener("input", getCellCount);
 clearBtn.addEventListener("click", clearGrid);
-
-styleBtns.forEach((btn) => btn.addEventListener("click", changeSketchStyle));
-window.addEventListener("keydown", changeSketchStyle);
-window.addEventListener("keydown", changeSketchMode);
-modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
 gridSwitch.addEventListener("click", toggleGrid);
 colorPicker.addEventListener("input", () => colorPicker.style.borderColor = colorPicker.value);
+styleBtns.forEach((btn) => btn.addEventListener("click", changeSketchStyle));
+modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
+window.addEventListener("keydown", changeSketchStyle);
+window.addEventListener("keydown", changeSketchMode);
 
 createCells(16);
 getCellCount();
