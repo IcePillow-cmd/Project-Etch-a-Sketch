@@ -179,13 +179,9 @@ cellCounter.addEventListener("change", changeCellCount)
 cellCounter.addEventListener("input", getCellCount)
 clearBtn.addEventListener("click", clearGrid);
 
-styleBtns.forEach((btn) => {
-    btn.addEventListener("click", changeSketchStyle);
-})
+styleBtns.forEach((btn) => btn.addEventListener("click", changeSketchStyle))
 window.addEventListener("keydown", changeSketchStyle)
 window.addEventListener("keydown", changeSketchMode)
 modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
 gridSwitch.addEventListener("click", toggleGrid);
-colorPicker.addEventListener("input", () => {
-    colorPicker.style.borderColor = colorPicker.value;
-})
+colorPicker.addEventListener("input", () => colorPicker.style.borderColor = colorPicker.value)
