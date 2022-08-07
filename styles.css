@@ -113,3 +113,10 @@ body {
     padding: 50px 0px 25px 0px;
     gap: 25px;
 }
+
+.footer-para {
+    font-family: var(--coming-fam);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
