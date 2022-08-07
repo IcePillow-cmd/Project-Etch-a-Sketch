@@ -84,3 +84,10 @@ body {
     font-size: 25px;
     margin: 0;
 }
+
+.shortcut-para {
+    font-family: var(--patrick-fam);
+    font-size: 20px;
+    text-transform: capitalize; 
+    margin: 0;
+}
