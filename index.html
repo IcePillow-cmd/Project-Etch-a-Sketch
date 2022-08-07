@@ -21,16 +21,26 @@
                 <input type="color" id="color-picker">
                 <button id="solid-btn" class="sketch-btn sketch-style-btn toggled">solid style</button>
             </div>
-            <button id="rainbow-btn" class="sketch-btn sketch-style-btn untoggled">rainbow style</button>
-            <button id="shade-btn" class="sketch-btn sketch-style-btn untoggled">blacken</button>
-            <button id="tint-btn" class="sketch-btn sketch-style-btn untoggled">whiten</button>
+            <div class="section-group">
+                <button id="rainbow-btn" class="sketch-btn sketch-style-btn untoggled">rainbow style</button>
+            </div>
+            <div class="section-group">
+                <button id="shade-btn" class="sketch-btn sketch-style-btn untoggled">blacken</button>
+            </div>
+            <div class="section-group">
+                <button id="tint-btn" class="sketch-btn sketch-style-btn untoggled">whiten</button>
+            </div>
             <button id="clear-btn" class="sketch-btn ">clear</button>
         </section>
         <div id="grid-container"></div>
         <section id="mode-section">
             <div class="section-group">
-                <button id="line-mode-btn" class="sketch-btn sketch-mode-btn toggled">pen down</button>
-                <button id="dot-mode-btn" class="sketch-btn sketch-mode-btn untoggled">pen up</button>
+                <div class="section-group">
+                    <button id="line-mode-btn" class="sketch-btn sketch-mode-btn toggled">pen down</button>
+                </div>
+                <div class="section-group">
+                    <button id="dot-mode-btn" class="sketch-btn sketch-mode-btn untoggled">pen up</button>
+                </div>
             </div>
             <div class="section-group">
                 <input type="range" min="4" max="64" value="16" id="cell-counter">
