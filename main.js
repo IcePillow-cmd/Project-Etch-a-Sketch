@@ -28,6 +28,7 @@ function createCells(baseNumber) {
 function changeCellCount() {
     const gridCells = document.querySelectorAll(".grid-cell");
     gridCells.forEach((cell) => gridCon.removeChild(cell));
+    gridSwitch.classList.replace("toggled", "untoggled");
     createCells(cellCounter.value);
 }
 
