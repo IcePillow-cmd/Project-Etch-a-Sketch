@@ -83,6 +83,14 @@ body {
     text-decoration: underline;
 }
 
+#color-picker {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    border: 5px solid black;
+}
+
 #counter-count {
     font-family: var(--coming-fam);
     font-size: 25px;
