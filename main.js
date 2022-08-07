@@ -172,9 +172,6 @@ function sketchCell(e) {
     }
 }
 
-createCells(16)
-getCellCount();
-
 gridCon.addEventListener("mouseover", sketchCell);
 cellCounter.addEventListener("change", changeCellCount)
 cellCounter.addEventListener("input", getCellCount)
@@ -185,4 +182,7 @@ window.addEventListener("keydown", changeSketchStyle)
 window.addEventListener("keydown", changeSketchMode)
 modeBtns.forEach((btn) => btn.addEventListener("click", changeSketchMode));
 gridSwitch.addEventListener("click", toggleGrid);
-colorPicker.addEventListener("input", () => colorPicker.style.borderColor = colorPicker.value)
+colorPicker.addEventListener("input", () => colorPicker.style.borderColor = colorPicker.value);
+
+createCells(16)
+getCellCount();
