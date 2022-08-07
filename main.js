@@ -14,6 +14,43 @@ const dotModeBtn = document.querySelector("#dot-mode-btn");
 const modeBtns = document.querySelectorAll(".sketch-mode-btn");
 const gridSwitch = document.querySelector("#grid-switch");
 
+
+function createCells(baseNumber) {
+    for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
+        const gridCell = document.createElement("div");
+        gridCell.classList.add("grid-cell");
+        gridCell.style.backgroundColor = "rgb(255,255,255)";
+        gridCell.style.flexBasis = `${100/baseNumber}%`
+        gridCon.appendChild(gridCell);
+    }
+}
+
+function changeCellCount() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => gridCon.removeChild(cell));
+    createCells(cellCounter.value);
+}
+
+function getCellCount() {
+    counterCount.textContent = `${cellCounter.value} x ${cellCounter.value}`
+}
+
+function clearGrid() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => cell.style.backgroundColor = "rgb(255,255,255)"); 
+}
+
+function toggleGrid() {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    if (gridSwitch.classList.contains("untoggled")) {
+        gridSwitch.classList.replace("untoggled", "toggled");
+        gridCells.forEach((cell) => cell.style.border = "none");
+    } else {
+        gridSwitch.classList.replace("toggled", "untoggled");
+        gridCells.forEach((cell) => cell.style.border = "1px solid black");
+    }
+}
+
 function changeStyleTarget(e) {
     switch (e.key) {
         case "a":
@@ -128,46 +165,9 @@ function tintSketch(e) {
     e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
 }
 
-
 function sketchCell(e) {
     if (e.target !== gridCon) {
         sketchStyle(e)
-    }
-}
-
-function createCells(baseNumber) {
-    for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
-        const gridCell = document.createElement("div");
-        gridCell.classList.add("grid-cell");
-        gridCell.style.backgroundColor = "rgb(255,255,255)";
-        gridCell.style.flexBasis = `${100/baseNumber}%`
-        gridCon.appendChild(gridCell);
-    }
-}
-
-function changeCellCount() {
-    const gridCells = document.querySelectorAll(".grid-cell");
-    gridCells.forEach((cell) => gridCon.removeChild(cell));
-    createCells(cellCounter.value);
-}
-
-function getCellCount() {
-    counterCount.textContent = `${cellCounter.value} x ${cellCounter.value}`
-}
-
-function clearGrid() {
-    const gridCells = document.querySelectorAll(".grid-cell");
-    gridCells.forEach((cell) => cell.style.backgroundColor = "rgb(255,255,255)"); 
-}
-
-function toggleGrid() {
-    const gridCells = document.querySelectorAll(".grid-cell");
-    if (gridSwitch.classList.contains("untoggled")) {
-        gridSwitch.classList.replace("untoggled", "toggled");
-        gridCells.forEach((cell) => cell.style.border = "none");
-    } else {
-        gridSwitch.classList.replace("toggled", "untoggled");
-        gridCells.forEach((cell) => cell.style.border = "1px solid black");
     }
 }
 
