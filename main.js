@@ -83,6 +83,10 @@ function getRandomNum(num, filler=0) {
     return Math.floor(Math.random()*num)+filler;
 }
 
+function getPercentValue(num, percentage) {
+    return Math.floor(num * percentage / 100);
+}
+
 function getRGBValues(rgb) {
     const rgbValues = rgb.match(/[\d]+/g);
     return {
@@ -96,10 +100,6 @@ function convertHexToRGB(hex) {
     const hexValues = hex.match(/[\w]{2}/g);
     const rgbValues = hexValues.map((hexValue) => parseInt(hexValue, 16));
     return `rgb(${rgbValues})`
-}
-
-function getPercentValue(num, percentage) {
-    return Math.floor(num * percentage / 100);
 }
 
 function rainbowSketch(e) {
