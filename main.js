@@ -102,6 +102,10 @@ function convertHexToRGB(hex) {
     return `rgb(${rgbValues})`
 }
 
+function solidSketch(e) {
+    e.target.style.backgroundColor = convertHexToRGB(colorPicker.value);
+}
+
 function rainbowSketch(e) {
     e.target.style.backgroundColor = `rgb(${getRandomNum(255)}, ${getRandomNum(255)}, ${getRandomNum(255)})`;
 }
@@ -124,6 +128,13 @@ function tintSketch(e) {
     e.target.style.backgroundColor = `rgb(${newRed}, ${newGreen}, ${newBlue})`;
 }
 
+
+function sketchCell(e) {
+    if (e.target !== gridCon) {
+        sketchStyle(e)
+    }
+}
+
 function createCells(baseNumber) {
     for (let i = 0; i < Math.pow(baseNumber, 2); i++) {
         const gridCell = document.createElement("div");
@@ -131,16 +142,6 @@ function createCells(baseNumber) {
         gridCell.style.backgroundColor = "rgb(255,255,255)";
         gridCell.style.flexBasis = `${100/baseNumber}%`
         gridCon.appendChild(gridCell);
-    }
-}
-
-function solidSketch(e) {
-        e.target.style.backgroundColor = convertHexToRGB(colorPicker.value);
-}
-
-function sketchCell(e) {
-    if (e.target !== gridCon) {
-        sketchStyle(e)
     }
 }
 
