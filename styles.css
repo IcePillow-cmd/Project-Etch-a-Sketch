@@ -89,6 +89,7 @@ body {
     border-radius: 10px;
     background-color: white;
     border: 5px solid black;
+    cursor: pointer;
 }
 
 #counter-count {
