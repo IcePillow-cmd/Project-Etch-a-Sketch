@@ -79,6 +79,10 @@ body {
     cursor: pointer;
 }
 
+.sketch-btn:hover {
+    text-decoration: underline;
+}
+
 #counter-count {
     font-family: var(--coming-fam);
     font-size: 25px;
